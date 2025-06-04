@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 14px "Microsoft YaHei UI","黑体","sans-serif";
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+ li{
+    list-style: none;
+}

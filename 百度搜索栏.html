@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/百度搜索栏样式.css">
+</head>
+<body>
+<div class="main">
+  <header>
+    <div class="left_nav">
+      <ul>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">hao123</a></li>
+        <li><a href="#">地图</a></li>
+        <li><a href="#">贴吧</a></li>
+        <li><a href="#">视频</a></li>
+        <li><a href="#">图片</a></li>
+        <li><a href="#">网盘</a></li>
+        <li><a href="#">文库</a></li>
+        <li><a href="#"><img src="images/ai.png"></a></li>
+        <li><a href="#">更多</a></li>
+      </ul>
+    </div>
+    <div class="right_nav">
+      <ul>
+        <li><a href="#" style="color:#4E6EF2 ">答题</a></li>
+        <li><a href="#">设置</a></li>
+        <li><button type="button">设置</button></li>
+      </ul>
+    </div>
+
+  </header>
+  <section class="logo_search">
+    <!--百度logo-->
+    <div class="logo">
+      <img src="images/logo.png">
+    </div>
+    <!--搜索栏-->
+    <div class="search">
+      <svg t="1748928651369" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9185" width="24" height="24"><path d="M269.44 256l23.296-75.381333A74.666667 74.666667 0 0 1 364.074667 128h295.850666a74.666667 74.666667 0 0 1 71.338667 52.618667L754.56 256H821.333333c64.8 0 117.333333 52.533333 117.333334 117.333333v426.666667c0 64.8-52.533333 117.333333-117.333334 117.333333H202.666667c-64.8 0-117.333333-52.533333-117.333334-117.333333V373.333333c0-64.8 52.533333-117.333333 117.333334-117.333333h66.773333z m23.605333 64H202.666667a53.333333 53.333333 0 0 0-53.333334 53.333333v426.666667a53.333333 53.333333 0 0 0 53.333334 53.333333h618.666666a53.333333 53.333333 0 0 0 53.333334-53.333333V373.333333a53.333333 53.333333 0 0 0-53.333334-53.333333h-90.378666a32 32 0 0 1-30.570667-22.549333l-30.272-97.930667a10.666667 10.666667 0 0 0-10.186667-7.52H364.074667a10.666667 10.666667 0 0 0-10.186667 7.52l-30.272 97.92A32 32 0 0 1 293.045333 320zM512 725.333333c-88.362667 0-160-71.637333-160-160 0-88.362667 71.637333-160 160-160 88.362667 0 160 71.637333 160 160 0 88.362667-71.637333 160-160 160z m0-64a96 96 0 1 0 0-192 96 96 0 0 0 0 192z" fill="#8a8a8a" p-id="9186"></path></svg>
+      <input type="text" placeholder="请输入查询内容" >
+      <button type="submit">百度一下</button>
+    </div>
+    <div class="count">
+      <div><img class="baidu_ai" src="images/baiduAI.png"></div>
+      <div><p>今日已解决114514个问题</p></div>
+      <div class="round"><svg t="1748953977347" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15753" width="12" height="12"><path d="M548.1 830.2L841.3 537H87v-50h754.3L548.1 193.8l35.4-35.4L937 512 583.4 865.6l-35.3-35.4z" p-id="15754" fill="#2c2c2c"></path></svg></div>
+    </div>
+  </section>
+  <section class="hot">
+      <div class="hot_search_title">
+        <div class="hot_title"><strong>百度热搜</strong><svg t="1749007217059" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2103" width="15" height="15"><path d="M491.946667 116.053333L887.936 512l-395.946667 395.946667-45.269333-45.226667L797.44 512 446.698667 161.28z" fill="#2c2c2c" p-id="2104"></path></svg></div>
+
+        <div class="hot_title_refresh">
+          <div style="width: 18px"><svg t="1749007452813" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4182" width="16" height="16"><path d="M172.6 505.5c1-43.2 9.9-85.1 26.6-124.5 17.1-40.5 41.6-76.7 72.8-108.1 31.2-31.3 67.6-55.8 108.1-72.9 41.9-17.7 86.3-26.7 132.3-26.7 45.9 0 90.4 9 132.2 26.7 40.4 17.1 76.7 41.6 108 72.9 9.8 9.8 19 20.2 27.5 31l-59.5 46.4c-5.2 4.1-3.5 12.3 3 13.9L897 406.8c4.9 1.2 9.8-2.6 9.8-7.6l0.8-178.7c0-6.6-7.6-10.4-12.7-6.2l-55.7 43.6C763.1 160.7 645 98.4 512.2 98.4c-226.3 0-410.4 181.4-414.7 406.8-0.1 4.4 3.5 8.1 7.9 8.1h59.3c4.4-0.1 7.8-3.5 7.9-7.8z m746.8 7.7h-59.3c-4.3 0-7.8 3.5-7.9 7.7-1 43.2-9.9 85.1-26.6 124.5-17.1 40.5-41.6 76.9-72.8 108.1-31.2 31.2-67.6 55.8-108.1 72.9C602.9 844 558.5 853 512.5 853s-90.4-9-132.3-26.7c-40.4-17.1-76.7-41.6-108-72.9-9.8-9.8-19-20.2-27.5-31l59.5-46.4c5.2-4.1 3.5-12.3-3-13.9l-173.6-42.5c-4.9-1.2-9.8 2.6-9.8 7.6l-0.5 178.8c0 6.6 7.6 10.4 12.7 6.2l55.7-43.6c76 97.1 194.1 159.4 326.9 159.4C739 928 923 746.5 927.3 521.2c0.1-4.3-3.5-8-7.9-8z m0 0" fill="#515151" p-id="4183"></path></svg></div>
+          <div style="color: rgb(98, 102, 117)"><a href="#">换一换</a></div>
+        </div>
+      </div>
+      <div class="hot_content">
+        <ul>
+          <li><span style="color: red">1</span><a href="#">老百姓盼的 就是我们要干的</a></li>
+          <li><span>6</span><a href="#">因猥亵被处分的男教师到保卫处任职</a></li>
+          <li><span style="color: orange">2</span><a href="#">马斯克怒批特朗普税改法案：令人作呕</a></li>
+          <li><span>7</span><a href="#">亚朵酒店被曝出现医院枕套</a></li>
+          <li><span style="color: yellowgreen">3</span><a href="#">李在明当选韩国总统任期正式开始</a></li>
+          <li><span>8</span><a href="#">男友还原女子在三亚被蛇咬身亡过程</a></li>
+          <li><span>4</span><a href="#">22岁就分房社区：老人每年领7000元</a></li>
+          <li><span>9</span><a href="#">“结石姐”确诊乳腺癌曾参加《歌手》</a></li>
+          <li><span>5</span><a href="#">泰国空军宣布购买新型战斗机</a></li>
+          <li><span>10</span><a href="#">教育部发布2025年高考提示</a></li>
+        </ul>
+    </div>
+  </section>
+  <footer>
+    <div class="bottom-content">
+      <ul>
+        <li><a href="#">关于百度</a></li>
+        <li><a href="#">About Baidu</a></li>
+        <li><a href="#">使用百度前必读</a></li>
+        <li><a href="#">帮助中心</a></li>
+        <li><a href="#">京公网安备11000002000001号</a></li>
+        <li><a href="#">京ICP证030173号</a></li>
+        <li><a href="#">互联网新闻信息服务许可证11220180008</a></li>
+        <li><a href="#">网络文化经营许可证： 京网文〔2023〕1034-029号</a></li>
+        <li><a href="#">信息网络传播视听节目许可证 0110516</a></li>
+        <li><a href="#"> 互联网宗教信息服务许可证编号：京（2022）0000043</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

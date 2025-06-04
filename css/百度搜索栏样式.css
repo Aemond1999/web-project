@@ -1,0 +1,228 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+
+}
+.main{
+
+    height: 953px;
+}
+.logo_search{
+    height: 321px;
+}
+
+/*左导航栏*/
+.left_nav ul{
+    display: flex;
+    line-height: 60px;
+
+}
+.left_nav li{
+    margin-left:24px ;
+    font-size: 13px;
+}
+.left_nav img{
+    position: relative;
+    top: 2px;
+    width: 26px;
+    height: 14px;
+}
+/*右导航栏*/
+.right_nav ul{
+    display: flex;
+    line-height: 60px;
+}
+.right_nav li{
+    margin-right:30px ;
+
+}
+.right_nav button{
+    width: 48px;
+    height: 24px;
+    color: white;
+    background-color: #4E6EF2;
+    border: none;
+    border-radius: 6px;
+}
+
+
+/*logo样式*/
+.logo{
+    height: 170px;
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    width: 270px;
+    height: 130px;
+    margin: 25px auto 0;
+}
+
+
+
+
+/*搜索框样式*/
+.search{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 656px;
+}
+.search input{
+    width:548px;
+    height: 44px;
+    font-size: 16px;
+    color: #222;
+    padding-left: 16px;
+    padding-right: 87px;
+    border: 2px solid #C4C7CE;
+    border-right: none;
+    border-bottom-left-radius: 9px;
+    border-top-left-radius: 9px;
+    outline: none;
+}
+.search input:focus{
+   border-color:#4E6EF2;
+}
+.search button{
+    width: 108px;
+    height: 44px;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    background-color: #4E6EF2;
+    border: none;
+    border-bottom-right-radius: 9px;
+    border-top-right-radius: 9px;
+}
+.search button:hover{
+    background-color: #4662D9;
+}
+.search svg{
+    position: absolute;
+    left: 1140px;
+}
+ .count{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 336px;
+     height: 40px;
+     margin: 35px auto 0;
+     padding: 8px;
+     border-radius: 29px;
+     background-color: #EAF0FF;
+ }
+ .count .baidu_ai{
+     width: 63px;
+     margin-right: 6px;
+     margin-left: 6px;
+ }
+ .count p{
+     width: 215px;
+     font-size: 16px;
+     font-weight: 400;
+     font-family: Arial, sans-serif;
+     letter-spacing: 1px;
+ }
+ .count .round{
+     width: 24px;
+     height: 24px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     background-color: #D7DDFF;
+ }
+
+/*百度热搜*/
+.hot{
+    width: 654px;
+    height: 204px;
+    margin:25px auto 0;
+
+}
+.hot_search_title{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+}
+.hot_title strong:hover{
+    color: #4E6EF2;
+
+}
+.hot_title svg{
+    position: absolute;
+    top:4.5px
+}
+.hot_title_refresh{
+    display: flex;
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+}
+.hot_title_refresh a:hover{
+    color: #4E6EF2;
+}
+.hot_title_refresh svg{
+    position: absolute;
+    top: 4px;
+}
+
+
+.hot_content ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+}
+
+.hot_content a:hover{
+    color: #4E6EF2;
+    text-decoration: underline;
+}
+
+.hot_content ul span{
+    display: inline-block;
+    width: 8%;
+    color: rgb(145, 149, 163);
+}
+.hot_content li:nth-child(odd){
+    margin-right: 5%;
+}
+.hot_content li:nth-child(even){
+    margin-left: 5%;
+}
+.hot_content li{
+    line-height: 36px;
+    height: 36px;
+    width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 41px;
+    width: 100%;
+}
+.bottom-content a{
+    font-size: 12px;
+    color: #bbb;
+    line-height:41px ;
+}
+.bottom-content ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+
