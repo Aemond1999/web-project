@@ -1,0 +1,162 @@
+.main {
+    height: 100vh;
+    background-image: url("/uploads/jetbrain背景图片.png");
+    background-size: cover;
+}
+
+/*-----------------------------------导航栏----------------------------------*/
+.nav {
+    height: 7.5vh;
+    background-color: #19191C;
+}
+
+.nav div{
+    height: 72px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1268px;
+    margin: 0 auto;
+}
+
+.nav_logo{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.nav_logo img{
+    margin-right: 8px;
+}
+
+.nav_logo a{
+    line-height: 72px;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.nav_logo a:hover{
+    color: #A3A3A4;
+}
+
+.nav_menu{
+    width: 60%;
+    display: flex;
+
+
+}
+.left_menu_item{
+    display: flex;
+    justify-content: space-evenly;
+    width: 78%;
+}
+.left_menu_item button{
+    line-height:72px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #A3A3A4;
+    border: none;
+    background-color:transparent;
+}
+.left_menu_item button:hover{
+    color: white;
+}
+.right_menu_item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 22%;
+}
+
+.right_menu_item div{
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 50%;
+}
+.right_menu_item div:hover{
+    background-color: #303033;
+}
+.main_content{
+    height:92.5vh ;
+}
+.content_one{
+    height: 336px;
+    margin-top: 96px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.content_one :nth-child(1){
+    font-size: 92px;
+    font-weight: 600;
+    color: white;
+    margin-top: 48px;
+}
+.content_one :nth-child(2){
+    font-size: 43px;
+    font-weight: 600;
+    color: white;
+    margin-top: 48px;
+}
+.content_one :nth-child(2) a{
+    font-size: 43px;
+    font-weight: 600;
+    color:#8473FF ;
+    border-bottom: 2px solid #8473FF;
+}
+.content_one p {
+    line-height: 66px;
+
+}
+.content_one  a:hover{
+    color: white;
+    border-color: white;
+}
+
+.content_one svg {
+    position: relative;
+    top: 4px;
+}
+
+.content_one :nth-child(3){
+    font-size: 43px;
+    font-weight: 600;
+    color: white;
+}
+.content_one :nth-child(3) a:hover{
+    color: white;
+    border-color: white;
+}
+.content_one :nth-child(3) :nth-child(1):not(svg){
+    font-size: 43px;
+    font-weight: 600;
+    color: #08DEAA;
+    border-bottom: 2px solid #08DEAA;
+}
+.content_one :nth-child(3) :nth-child(2):not(svg){
+    font-size: 43px;
+    font-weight: 600;
+    color: #F31199;
+    border-bottom: 2px solid #F31199;
+}
+#svg_b{
+    fill: #F31199;
+}
+#svg_a{
+    fill: #08DEAA;
+}
+#a2:hover,#a3:hover{
+    color: white;
+    border-color: white;
+
+}
+#svg_a:hover,#svg_b:hover{
+    fill: white;
+}
+.content_one p:hover{
+    color: white;
+}
+
