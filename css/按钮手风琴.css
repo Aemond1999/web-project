@@ -21,20 +21,18 @@ body {
     line-height: 80px;
     border-radius: 40px;
     border: none;
-    box-shadow: 0 0 4px 3px whitesmoke;
     background-color: transparent;
     transition-property: width;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     position: relative;
     overflow: hidden;
-
+    flex-wrap: wrap;
 }
 
 .btn-item .btn-logo {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 80px;
     height: 80px;
     border-radius: 40px;
@@ -42,9 +40,7 @@ body {
 }
 
 .btn-item .btn-name {
-    transition-duration: 0.5s;
-    font-size: 0;
-
+    transition-duration: 0.3s;
 }
 
 .btn-item:hover {

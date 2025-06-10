@@ -1,13 +1,13 @@
-body{
+body {
     height: 100vh;
     background-color: #F5F5F7;
 }
 
-#main{
+#main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 400px;
     width: 350px;
     border-radius: 18px;
@@ -15,27 +15,29 @@ body{
 }
 
 
-.light-mode{
-    color: rgba(0,0,0,0.5);
+.light-mode {
+    color: rgba(0, 0, 0, 0.5);
     background-color: white;
 }
-.dark-mode{
+
+.dark-mode {
     background-color: #31333A;
-    color:#CED3DB;
+    color: #CED3DB;
 }
 
 
-
-.theme{
+.theme {
     height: 110px;
 }
-.theme p{
+
+.theme p {
     margin-top: 40px;
     margin-left: 15px;
     font-size: 22px;
     font-weight: 800;
 }
-.mode-btns{
+
+.mode-btns {
     display: flex;
     justify-content: space-between;
     height: 44px;
@@ -45,11 +47,13 @@ body{
     padding: 4px;
     transition-duration: 0.5s;
 }
-svg{
-    fill:#707070;
+
+svg {
+    fill: #707070;
     margin-right: 10px;
 }
-.mode-btn-item{
+
+.mode-btn-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +61,7 @@ svg{
     height: 36px;
     flex: 1;
     border: none;
-    border-radius:9px;
+    border-radius: 9px;
     font-size: 16px;
     font-weight: 700;
     background-color: transparent;
@@ -65,37 +69,41 @@ svg{
 }
 
 /*分界线*/
-.line{
+.line {
     height: 1px;
-    background-color:#CCCCCC ;
+    background-color: #CCCCCC;
 }
-
-
 
 
 /*按钮背景*/
-.mode-btns-light-mode{
-    background-color:rgba(0,0,0,0.1) ;
+.mode-btns-light-mode {
+    background-color: rgba(0, 0, 0, 0.1);
 }
-.mode-btns-dark-mode{
+
+.mode-btns-dark-mode {
     background-color: #222128;
 }
 
 /*按钮*/
 
-.mode-btn-item-light-mode{
-    color: rgba(0,0,0,0.4);
+.mode-btn-item-light-mode {
+    color: rgba(0, 0, 0, 0.4);
 }
-.mode-btn-item-dark-mode{
+
+.mode-btn-item-dark-mode {
     color: #A6B1BA;
 }
-.svg-dark-mode{
+
+.svg-dark-mode {
     fill: #A3A3A4;
 }
 
+button {
+    cursor: pointer;
+}
 
 /*滑动窗口*/
-.mobile-box{
+.mobile-box {
     z-index: 0;
     width: 162px;
     position: absolute;
@@ -103,12 +111,47 @@ svg{
     border-radius: 9px;
     transition-duration: 0.5s;
 }
-.mobile-box-light-mode{
+
+.mobile-box-light-mode {
     background-color: white;
 }
-.mobile-box-dark-mode{
-    background-color:#494A51;
+
+.mobile-box-dark-mode {
+    background-color: #494A51;
 }
+
+.another-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 318px;
+    margin: 0 auto;
+    height: 240px;
+    padding: 4px;
+    transition-duration: 0.5s;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.another-btns li {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
