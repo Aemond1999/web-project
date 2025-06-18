@@ -1,0 +1,189 @@
+#page {
+    background-color: #F5F5F7;
+    height: 100vh;
+}
+/*图标*/
+.iconfont {
+    z-index: 2;
+}
+
+.icon-apple {
+    position: relative;
+    top: -1px
+}
+
+.iconfont.icon-chazhaotubiao {
+    font-size: 16px;
+
+}
+.iconfont.icon-zuoyoujiantou,.iconfont.icon-zuoyoujiantou1{
+    font-size: 14px;
+    color: rgb(134, 134, 139);
+}
+
+/*导航栏*/
+header nav {
+    width: 1024px;
+    height: 44px;
+    padding: 0 22px;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: SF Pro SC, SF Pro Text, SF Pro Icons, PingFang SC, Helvetica Neue, Helvetica, Arial, sans-serif;;
+}
+
+.nav-items {
+    display: grid;
+    grid-template-rows: 44px;
+    grid-template-columns: repeat(14, 1fr);
+    cursor: pointer;
+}
+
+.nav-item-list {
+    grid-column: 2/13;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    justify-items: center;
+    text-align: center;
+
+}
+
+.nav-item-list > div {
+    line-height: 44px;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-title {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-submenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 44px;
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    background-color: #F5F5F7;
+}
+
+.nav-item-list > div:hover .nav-submenu {
+    height: 450px;
+    z-index: 1;
+    background-color: #FAFAFC;
+}
+
+.nav-submenu-container {
+    width: 930px;
+    margin: 60px  auto 0;
+    display: flex;
+    text-align: left;
+}
+
+.nav-submenu-group {
+    margin-right: 75px;
+}
+
+.nav-submenu-group-title {
+    color: rgb(110, 110, 115);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.nav-submenu-item-list-1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-submenu-item-list-2, .nav-submenu-item-list-3 {
+    line-height: 24px;
+    font-weight: 600;
+    color: rgb(51, 51, 54);
+}
+
+
+/*轮播图*/
+.slideshow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    transition-duration: 0.5s;
+
+}
+.slideshow-nextbtn,.slideshow-prebtn{
+    cursor: pointer;
+}
+
+.slideshow-container{
+    width: 905px;
+    height: 100%;
+    overflow: hidden;
+
+}
+.slideshow-item-list{
+    display: flex;
+    width: 2715px;
+    height: 100%;
+    font-size: 12px;
+    font-weight:400;
+    text-align: center;
+    overflow: hidden;
+}
+.slideshow-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 905px;
+    height: 100%;
+    line-height: 20px;
+    transition-duration: 1s;
+}
+
+/*产品页*/
+.wrapper{
+    height: 581px;
+    margin-left: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.new-product-list{
+    display: flex;
+    width: 2080px;
+
+}
+.new-product-title{
+    font-size: 24px;
+    font-weight: 480;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+}
+.new-product-title span {
+    color: rgb(110, 110, 115);
+}
+
+.new-product-item{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin-left: 20px;
+    border-radius: 18px;
+}
+
+
+

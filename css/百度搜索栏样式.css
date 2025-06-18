@@ -23,7 +23,7 @@ header{
 }
 .left_nav img{
     position: relative;
-    top: 2px;
+    top: -2px;
     width: 26px;
     height: 14px;
 }
@@ -34,8 +34,9 @@ header{
 }
 .right_nav li{
     margin-right:30px ;
-
 }
+
+
 .right_nav button{
     width: 48px;
     height: 24px;

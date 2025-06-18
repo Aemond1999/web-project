@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .glass{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .glass h1{
+            background-size: 200%;
+            color: transparent;
+            background-image: linear-gradient(to right ,#008baa,#7e42a7,#6600c5,#6070fd,#2a46ff,#0099ff,#008ead);
+            font-size: 100px;
+            background-clip: text;
+            animation: jb 2s linear infinite;
+        }
+        @keyframes jb  {
+            to{
+                background-position: -200%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="glass">
+        <h1>HELLO WORLD!!!</h1>
+    </div>
+
+</body>
+</html>

@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 body{
-    font-size: 16px;
-    font-family:"Microsoft YaHei UI","黑体","sans-serif";
+    font-size: 14px;
+    font-weight: 400;
+    font-family:"-apple-system","SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 a{
@@ -17,4 +18,7 @@ a{
 }
 img{
     vertical-align: middle;
+}
+button{
+    cursor: pointer;
 }

@@ -20,7 +20,7 @@ body {
     height: 80px;
     line-height: 80px;
     border-radius: 40px;
-    border: none;
+    border: 1px solid whitesmoke;
     background-color: transparent;
     transition-property: width;
     transition-duration: 0.3s;
