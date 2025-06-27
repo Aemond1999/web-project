@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/google.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="google-logo">
+      <img src="uploads/google_logo.svg" />
+    </div>
+
+    <div class="google-search">
+      <div class="search-img"></div>
+      <input
+        type="text"
+        class="search-input"
+        placeholder="请输入要搜索的内容"
+      />
+      <div class="search-img"></div>
+      <div class="search-img"></div>
+    </div>
+
+    <div class="shortcuts">
+      <!-- 添加快捷方式按钮 -->
+      <div class="add-shortcut shortcut-item">
+        <div class="short-img">+</div>
+        <div class="short-name">添加快捷方式</div>
+      </div>
+
+      <!-- 弹出框 -->
+      <div class="pop-content">
+        <div class="pop-title">添加快捷方式</div>
+        <div class="pop-input">
+          <p class="input-title">名称</p>
+          <input type="text" class="web-name" name="web-name" />
+          <p class="input-title">网址</p>
+          <input type="text" class="web-url" name="web-url" />
+        </div>
+        <div class="pop-btns">
+          <button id="pop-confirm" disabled>确认</button>
+          <button id="pop-cancel">取消</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const popContent = document.querySelector(".pop-content");
+    const addShortcut = document.querySelector(".add-shortcut");
+    const body = document.querySelector("body");
+    const webName = document.querySelector(".web-name");
+    const webUrl = document.querySelector(".web-url");
+    const popCancel = document.querySelector("#pop-cancel");
+    const popConfirm = document.querySelector("#pop-confirm");
+    const shortCuts = document.querySelector(".shortcuts");
+    addShortcut.addEventListener("click", () => {
+      popContent.classList.toggle("pop-active");
+      body.classList.toggle("body-active");
+      webName.focus();
+    });
+    popCancel.addEventListener("click", () => {
+      popContent.classList.toggle("pop-active");
+      body.classList.toggle("body-active");
+    });
+    webUrl.addEventListener("input", () => {
+      if (webUrl.value.length > 0) {
+        popConfirm.disabled = false;
+        popConfirm.classList.add("pop-confirm-active");
+      } else {
+        popConfirm.disabled = true;
+        popConfirm.classList.remove("pop-confirm-active");
+      }
+    });
+
+    popConfirm.addEventListener("click", () => {
+      let newShortcut = document.createElement("div");
+      newShortcut.innerHTML = `<div class=${"shortcut-item"}><div class=${"short-img"}></div><div class=${"short-name"}>${
+        webUrl.value
+      }</div></div>`;
+      shortCuts.appendChild(newShortcut);
+      popContent.classList.toggle("pop-active");
+      body.classList.toggle("body-active");
+      webUrl.value = "";
+      webName.value = "";
+    });
+  </script>
+</html>

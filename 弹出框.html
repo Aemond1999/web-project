@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <style>
+      body {
+        height: 100vh;
+      }
+      .body-active {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .pop-content {
+        background-color: white;
+        padding: 0px 20px;
+        position: fixed;
+        width: 540px;
+        height: 260px;
+        border-radius: 9px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        visibility: hidden;
+      }
+      .pop-active {
+        visibility: visible;
+      }
+      .input-title {
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .pop-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 60%;
+      }
+      .pop-input input {
+        outline: none;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid gray;
+        background-color: rgba(0, 0, 0, 0.08);
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+        height: 40px;
+        width: 100%;
+      }
+      .pop-input input:focus {
+        border-color: blue;
+      }
+      .pop-btns button {
+        margin-left: 20px;
+        float: right;
+        font-weight: 600;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        width: 60px;
+        height: 35px;
+        cursor: default;
+      }
+      #pop-cancel {
+        color: rgb(6, 126, 230);
+        cursor: pointer;
+
+        border-color: rgba(6, 126, 230, 0.5);
+      }
+      #pop-cancel:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .pop-confirm-active {
+        color: rgb(6, 126, 230);
+        border-color: rgba(6, 126, 230, 0.5) !important;
+        cursor: pointer !important;
+      }
+      .add-shortcut {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .add-shortcut:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .short-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(177, 216, 248);
+        font-size: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 添加快捷方式按钮 -->
+    <div class="add-shortcut">
+      <div class="short-img">+</div>
+      <div class="short-name">添加快捷方式</div>
+    </div>
+    <!-- 弹出框 -->
+    <div class="pop-content">
+      <div class="pop-title">添加快捷方式</div>
+      <div class="pop-input">
+        <p class="input-title">名称</p>
+        <input type="text" class="web-name" name="web-name" />
+        <p class="input-title">网址</p>
+        <input type="text" class="web-url" name="web-url" />
+      </div>
+      <div class="pop-btns">
+        <button id="pop-confirm" disabled>确认</button>
+        <button id="pop-cancel">取消</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const popContent = document.querySelector(".pop-content");
+    const addShortcut = document.querySelector(".add-shortcut");
+    const body = document.querySelector("body");
+    const webName = document.querySelector(".web-name");
+    const webUrl = document.querySelector(".web-url");
+    const popCancel = document.querySelector("#pop-cancel");
+    const popConfirm = document.querySelector("#pop-confirm");
+    addShortcut.addEventListener("click", () => {
+      popContent.classList.toggle("pop-active");
+      body.classList.toggle("body-active");
+      webName.focus();
+    });
+    popCancel.addEventListener("click", () => {
+      popContent.classList.toggle("pop-active");
+      body.classList.toggle("body-active");
+    });
+    webUrl.addEventListener("input", () => {
+      if (webUrl.value.length > 0) {
+        popConfirm.disabled = false;
+        popConfirm.classList.add("pop-confirm-active");
+      } else {
+        popConfirm.disabled = true;
+        popConfirm.classList.remove("pop-confirm-active");
+      }
+    });
+    popConfirm.addEventListener("click", () => {
+      console.log(webName.value);
+      console.log(webUrl.value);
+    });
+  </script>
+</html>
