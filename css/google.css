@@ -8,7 +8,7 @@ body {
 .google-logo {
   margin: 0 auto;
   text-align: center;
-  margin-top: 140px;
+  margin-top: 125px;
 }
 .google-search {
   display: flex;
@@ -18,28 +18,37 @@ body {
   box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
   height: 50px;
   border-radius: 24px;
+  min-width: 300px;
+ 
 }
 .search-img {
-  width: 5%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 32px;
   height: 100%;
+
 }
 .search-input {
-    background-color: transparent;
+  background-color: transparent;
   height: 100%;
-  width: 80%;
+  width: 82%;
   border: none;
   outline: none;
+  font-size: 16px;
+
 }
-.shortcuts{
-    display: flex;
-    justify-content:center;
-    width: 70%;
-    margin: 20px auto 0;
-    flex-wrap: wrap;
+.shortcuts {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 20px auto 0;
+  flex-wrap: wrap;
+  min-width: 300px;
 }
-
-
-
+.short-name {
+  font-size: 12px;
+}
 
 .pop-content {
   background-color: white;
@@ -108,6 +117,18 @@ body {
   border-color: rgba(6, 126, 230, 0.5) !important;
   cursor: pointer !important;
 }
+
+
+.add-shortcut{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
 .shortcut-item {
   width: 100px;
   height: 100px;
@@ -117,14 +138,28 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-.shortcut-item:hover {
+.add-shortcut:hover,.shortcut-item:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.short-img {
+.add-short-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: rgb(177, 216, 248);
   font-size: 30px;
   text-align: center;
+}
+
+.short-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  font-size: 30px;
+  text-align: center;
+}
+.short-img img{
+  width: 24px;
+  height: 24px;
+
 }

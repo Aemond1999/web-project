@@ -6,6 +6,7 @@
     <title>Google</title>
     <link href="css/base.css" rel="stylesheet" />
     <link href="css/google.css" rel="stylesheet" />
+    <link href="css/google-iconfont.css" rel="stylesheet" />
   </head>
   <body>
     <div class="google-logo">
@@ -13,20 +14,26 @@
     </div>
 
     <div class="google-search">
-      <div class="search-img"></div>
+      <div class="search-img">
+        <i class="iconfont icon-ic_search_48px"></i>
+      </div>
       <input
         type="text"
         class="search-input"
-        placeholder="请输入要搜索的内容"
+        placeholder="在Google中搜素，或输入网址"
       />
-      <div class="search-img"></div>
-      <div class="search-img"></div>
+      <div class="search-img">
+        <i class="iconfont icon-ic_settings_voice_48px"></i>
+      </div>
+      <div class="search-img">
+        <i class="iconfont icon-ic_photo_camera_48px"></i>
+      </div>
     </div>
 
     <div class="shortcuts">
       <!-- 添加快捷方式按钮 -->
-      <div class="add-shortcut shortcut-item">
-        <div class="short-img">+</div>
+      <div class="add-shortcut">
+        <div class="add-short-img">+</div>
         <div class="short-name">添加快捷方式</div>
       </div>
 
@@ -47,6 +54,10 @@
     </div>
   </body>
   <script>
+    window.onload = () => {
+      showShortCuts("shortcuts");
+    };
+
     const popContent = document.querySelector(".pop-content");
     const addShortcut = document.querySelector(".add-shortcut");
     const body = document.querySelector("body");
@@ -55,15 +66,29 @@
     const popCancel = document.querySelector("#pop-cancel");
     const popConfirm = document.querySelector("#pop-confirm");
     const shortCuts = document.querySelector(".shortcuts");
+    const shortcutItems = document.querySelectorAll("shortcut-item");
+
+    document.querySelectorAll(".short");
+    function Shortcut(name, url) {
+      this.url = url;
+      this.name = name;
+    }
+
+    function getFavicon(domain) {
+      return `https://api.vwood.xyz/v1/Favicon/public?domain=${domain}`;
+    }
+
     addShortcut.addEventListener("click", () => {
       popContent.classList.toggle("pop-active");
       body.classList.toggle("body-active");
       webName.focus();
     });
+
     popCancel.addEventListener("click", () => {
       popContent.classList.toggle("pop-active");
       body.classList.toggle("body-active");
     });
+
     webUrl.addEventListener("input", () => {
       if (webUrl.value.length > 0) {
         popConfirm.disabled = false;
@@ -75,15 +100,42 @@
     });
 
     popConfirm.addEventListener("click", () => {
-      let newShortcut = document.createElement("div");
-      newShortcut.innerHTML = `<div class=${"shortcut-item"}><div class=${"short-img"}></div><div class=${"short-name"}>${
-        webUrl.value
-      }</div></div>`;
-      shortCuts.appendChild(newShortcut);
+    
+      let shortcut = new Array();
+      let shortcutsIist = localStorage.getItem("shortcuts");
+      if (shortcutsIist === null) {
+        shortcut.push(new Shortcut(webName.value, getFavicon(webUrl.value)));
+        localStorage.setItem("shortcuts", JSON.stringify(shortcut));
+      } else {
+        shortcutsIist = JSON.parse(shortcutsIist);
+        shortcutsIist.push(
+          new Shortcut(webName.value, getFavicon(webUrl.value))
+        );
+        localStorage.setItem("shortcuts", JSON.stringify(shortcutsIist));
+      }
+      showShortCuts("shortcuts");
       popContent.classList.toggle("pop-active");
       body.classList.toggle("body-active");
       webUrl.value = "";
       webName.value = "";
     });
+
+    function showShortCuts(key) {
+      let shortcutsIist = localStorage.getItem(key);
+      if (shortcutsIist !== null) {
+        shortcutsIist = JSON.parse(shortcutsIist);
+        for (item of shortcutsIist) {
+          let url = new URL(item.url);
+          let search=url.search
+          let newElem = document.createElement("a");
+          newElem.href="https://"+search.split("=")[1]
+          newElem.innerHTML =`<div class="shortcut-item">
+            <div class="short-img"><img src="${item.url}"></div>
+            <div class="short-name">${item.name}</div>
+            </div>`;
+          shortCuts.insertBefore(newElem, addShortcut);
+        }
+      }
+    }
   </script>
 </html>
